@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "cb452195-3424-4275-810c-922d9f29bf7e",
+		"name": "programmerTutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "All users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dhdhd",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "dhdhdh",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/neider/Imágenes/Debian_logo.png"
+								},
+								{
+									"key": "email",
+									"value": "dhdhdhdh@yaho.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4455",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "STUDENT",
+									"type": "text"
+								},
+								{
+									"key": "list",
+									"value": "5f8de01e7587e218cdc32d4d",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"KATHERIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/5f90881f9db0822bef0a854e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"5f90881f9db0822bef0a854e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/5f9479e561743f002aa43239",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"5f9479e561743f002aa43239"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_id: User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/5f9088a39db0822bef0a854f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"5f9088a39db0822bef0a854f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tutorials",
+			"item": [
+				{
+					"name": "All tutorials",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/tutorials",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create TutorialVideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Var vs Let \",\n  \"description\": \"Con este vídeo aprenderás a las diferencias que existen entre var y let en el lenguaje de programación JavaScript...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tutorial",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update TutorialVideo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resource\": \"varvslet.mkv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tutorial/5f947c5661743f002aa4323a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorial",
+								"5f947c5661743f002aa4323a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTutorialVideo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tutorial/5f8def17bccdf4256e7d7d8d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorial",
+								"5f8def17bccdf4256e7d7d8d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TutorialId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/tutorial/5f947c5661743f002aa4323a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorial",
+								"5f947c5661743f002aa4323a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Lists",
+			"item": [
+				{
+					"name": "All lists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/lists",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\": \"Vídeos Educativos sección Javascript\",\n    \"tutorialVideo\":[\n        {\n         \"_id\":\"5f947c5661743f002aa4323a\"\n        }\n    ] \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteList",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/list/5f949617636652002a0d8933",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"list",
+								"5f949617636652002a0d8933"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update list",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":[\n       \"Vídeos Educativos sección Javascript (II)\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/list/5f9496cd9248ac002ac0efe7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"list",
+								"5f9496cd9248ac002ac0efe7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/list/5f9496cd9248ac002ac0efe7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"list",
+								"5f9496cd9248ac002ac0efe7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "katherin899@juzab.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

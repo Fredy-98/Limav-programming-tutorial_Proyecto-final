@@ -1,7 +1,20 @@
-# Limav-programming-tutorial_Proyecto-final
-Aplicativo para docentes y estudiantes, el cual  permite que interactúen y aprendan por medio de tutoriales de manera sencilla
+# ProgrammerTutorial Proyecto Final Programación Web
 
-Integrantes
-- Fredy Caraballo Páez
-- Katerin Muñoz 
-- Isaac Villalobos Arteaga
+## Project setup
+```
+npm install
+```
+
+```
+Notas:
+*** La api esta almacenada en la nube en el siguiente enlace https://programmer-tutorial.herokuapp.com
+
+*** El FrontEnd se encuentra en fase de desarrollo para ejecutarlo... npm run serve
+
+```
+ ## Integrantes
+ 
+ ### Katherin Muñoz López  
+ ### Fredy Caraballo Páez 
+ ### Isaac Villalobos Arteaga 
+

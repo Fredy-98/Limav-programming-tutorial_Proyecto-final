@@ -1,0 +1,3 @@
+1. Para probar el login usar las siguientes credenciales
+email: katherin899@juzab.com
+password: 1234567
