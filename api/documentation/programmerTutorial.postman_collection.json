@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "cb452195-3424-4275-810c-922d9f29bf7e",
+		"_postman_id": "8613986e-e3b8-4dc5-8cf1-672981a5c2aa",
 		"name": "programmerTutorial",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,7 +15,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
 								"type": "text"
 							}
 						],
@@ -45,7 +45,7 @@
 									"type": "text"
 								},
 								{
-									"key": "username",
+									"key": "userName",
 									"value": "dhdhdh",
 									"type": "text"
 								},
@@ -61,7 +61,7 @@
 								},
 								{
 									"key": "password",
-									"value": "4455",
+									"value": "dddd",
 									"type": "text"
 								},
 								{
@@ -175,7 +175,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
 								"type": "text"
 							}
 						],
@@ -197,8 +197,24 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"Var vs Let \",\n  \"description\": \"Con este vídeo aprenderás a las diferencias que existen entre var y let en el lenguaje de programación JavaScript...\"\n}",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "nombrePrueba",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description prueba",
+									"type": "text"
+								},
+								{
+									"key": "resource",
+									"type": "file",
+									"src": "/home/neider/Vídeos/video.mp4"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -221,10 +237,27 @@
 					"name": "update TutorialVideo",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
+								"type": "text"
+							}
+						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"resource\": \"varvslet.mkv\"\n}",
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "VAR VS LET",
+									"type": "text"
+								},
+								{
+									"key": "resource",
+									"value": "VAR_vs_LET.mkv",
+									"type": "text"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -285,6 +318,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "updateTutorialResource",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "resource",
+									"type": "file",
+									"src": "/home/neider/Vídeos/CloseDoor.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/tutorial/resource/5f947c5661743f002aa4323a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tutorial",
+								"resource",
+								"5f947c5661743f002aa4323a"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -299,7 +367,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDQyNjA3OTUsImV4cCI6MTYwNTEyNDc5NX0.y62yepsrCNXBI1OpMJjcl87bmwmF61j-5WDVPS7Jb5Q",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
 								"type": "text"
 							}
 						],
@@ -319,10 +387,16 @@
 					"name": "Create List",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjkwODgxZjlkYjA4MjJiZWYwYTg1NGUiLCJpYXQiOjE2MDU4NDQzNDcsImV4cCI6MTYwNjcwODM0N30.RtT1P1d8f0LnFfJmyh9ZTXLwsEM6_YDHiwJQ603sTMA",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"title\": \"Vídeos Educativos sección Javascript\",\n    \"tutorialVideo\":[\n        {\n         \"_id\":\"5f947c5661743f002aa4323a\"\n        }\n    ] \n}",
+							"raw": "{\n   \"title\": \"sddddssdsdd\",\n    \"tutorialVideo\":[\n        {\n         \"_id\":\"5f947c5661743f002aa4323a\"\n        }\n    ] \n}",
 							"options": {
 								"raw": {
 									"language": "json"

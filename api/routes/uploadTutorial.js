@@ -22,7 +22,7 @@ app.post('/tutorial', storage.single('resource'),async (req, res,next) => {
     let body = req.body; 
     const result = await cloudinary.uploader.upload(req.file.path,{resource_type: 'video', folder:'programmerTutorial/'});
     body.resource = result.secure_url;
-    const tutorial = Tutorial.create(body); 
+    const tutorial = await Tutorial.create(body); 
     res.status(200).json(tutorial);
 
   }catch(err){   
@@ -32,5 +32,27 @@ app.post('/tutorial', storage.single('resource'),async (req, res,next) => {
     next(err);  
   }           
 });
+
+/* Update product Resource */
+
+app.put('/tutorial/resource/:id', storage.single('resource'),async (req, res,next) => {
+  try {
+    let video = await Tutorial.findById(req.params.id);
+    const result = await cloudinary.uploader.upload(req.file.path,{resource_type: 'video',folder:'programmerTutorial/'});
+    const data = {
+      resource: result.secure_url || video.resource,
+
+    };
+    video = await Tutorial.findByIdAndUpdate(req.params.id, data, {new: true });
+    res.json(video);
+
+  }catch(err){   
+    res.status(500).send({  
+       message: `An ocurred error ${err}`   
+    })   
+    next(err);  
+  }           
+});
+/* Update product tutorial */
 
 export default app

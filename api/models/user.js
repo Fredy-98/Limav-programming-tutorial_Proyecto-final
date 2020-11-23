@@ -1,6 +1,6 @@
 import mongoose,{ Schema } from 'mongoose';
 import uniqueValidator from 'mongoose-unique-validator'
-import TutorialVideo from './tutorialVideo';
+// import TutorialVideo from './tutorialVideo';
 const rolesValidos = {
    values: ['ADMIN','STUDENT'],
    message: '{VALUE} no es un rol válido'
@@ -8,7 +8,7 @@ const rolesValidos = {
 const UserSchema = new Schema({
    name: {type: String},
    userName: {type: String},
-   email: {type:String,required:true},
+   email: {type:String/* ,required:true */},
    password: {type:String},
    role: { type: String, default: 'STUDENT', enum: rolesValidos },
    /* Agregar la referencia a tutorialVideo

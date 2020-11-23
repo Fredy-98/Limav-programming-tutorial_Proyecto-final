@@ -5,6 +5,7 @@ import User from '../views/User.vue'
 import List from '../views/List.vue'
 import tutorialVideo from '../views/tutorialVideo.vue'
 import Login from '../components/Login.vue'
+import store from '../store'
 
 Vue.use(VueRouter)
 
@@ -12,7 +13,8 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {requireAuth: true}
   },
   {
     path:'/login',
@@ -27,17 +29,20 @@ Vue.use(VueRouter)
   {
     path:'/user', 
     name:'User', 
-    component: User 
+    component: User,
+    meta: {requireAuth: true} 
   },
   {
     path:'/list',
     name:'List',
-    component: List
+    component: List,
+    meta: {requireAuth: true}
   },
   {
     path:'/tutorial',
     name:'tutorialVideo',
-    component: tutorialVideo
+    component: tutorialVideo,
+    meta: {requireAuth: true}
   },
   /* <example params>*/
   /*{
@@ -54,4 +59,12 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to,from,next) =>{
+  const rutaProtegida = to.matched.some(record => record.meta.requireAuth)
+  if(rutaProtegida && store.state.token === ''){
+    next({name:'Login'})
+  }else{
+    next();
+  }
+});
 export default router

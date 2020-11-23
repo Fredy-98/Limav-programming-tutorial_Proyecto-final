@@ -1,5 +1,5 @@
-require('./config/config');
-// require('dotenv').config()
+require('./config/config');  /* HEROKU */
+/* require('dotenv').config()*/  /* LOCAL */
 import express from 'express';
 const app = express();
 import morgan from 'morgan';
@@ -22,9 +22,13 @@ app.use(history());
 app.use(express.static(path.join(__dirname,'public')));
 
 
-//config db
+/*config db*/
+/* 
+ local: process.env.URLDB 
+ heroku: process.env.MONGO_URLDB
+*/
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.MONGO_URLDB,/* process.env.URLDB, */ { useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify:false }, (err, res) => {
+mongoose.connect(process.env.MONGO_URLDB,  /* process.env.URLDB, */{ useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify:false }, (err, res) => {
     if (err) {
         console.log(`Error connecting to the database ${err}`)
     }

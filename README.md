@@ -9,7 +9,7 @@ npm install
 Notas:
 *** La api esta almacenada en la nube en el siguiente enlace https://programmer-tutorial.herokuapp.com
 
-*** El FrontEnd se encuentra en fase de desarrollo para ejecutarlo... npm run serve
+*** Para ejecutar el proyecto cd frontend, luego npm run serve
 
 ```
  ## Integrantes

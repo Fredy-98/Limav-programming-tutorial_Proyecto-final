@@ -17,14 +17,15 @@ const storage = multer({
   }
 })
 
-app.post('/user', storage.single('image'),async (req, res,next) => {
+// app.post('/user', storage.single('image'),async (req, res,next) => {
+app.post('/user', storage.single('image'),async function(req, res,next){
   // Code ES6
   try {   
     let body = req.body; 
     body.password = await bcrypt.hashSync(body.password,10);
     const result = await cloudinary.uploader.upload(req.file.path,{folder:'programmerTutorial/'});
     body.image = result.secure_url;
-    const user = User.create(body); 
+    const user = await User.create(body); 
     res.status(200).json(user);
 
   }catch(err){   
