@@ -12,9 +12,8 @@ Notas:
 *** Para ejecutar el proyecto cd frontend, luego npm run serve
 
 *** Credenciales para iniciar sesion
-```
-katherin899@juzab.com: 1234567
-```
+
+*** katherin899@juzab.com: 1234567
 
 ```
  ## Integrantes
